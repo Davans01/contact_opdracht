@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Performance index{% endblock %}
+
+{% block body %}
+    <h1>Performance index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Starttime</th>
+                <th>Hall</th>
+                <th>MaxSeats</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for performance in performances %}
+            <tr>
+                <td>{{ performance.id }}</td>
+                <td>{{ performance.date ? performance.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ performance.starttime ? performance.starttime|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ performance.hall }}</td>
+                <td>{{ performance.maxSeats }}</td>
+                <td>
+                    <a class="btn btn-info" href="{{ path('performance_show', {'id': performance.id}) }}">Show</a>
+                    <a class="btn btn-warning" href="{{ path('performance_edit', {'id': performance.id}) }}">Edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{{ path('performance_new') }}">Create new</a>
+{% endblock %}
