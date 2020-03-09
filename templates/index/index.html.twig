@@ -3,10 +3,34 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
+{# CARD 1 #}
+<div class="card">
+  <h5 class="card-header">Alle optredens</h5>
+  <div class="card-body">
+    <h5 class="card-title">Geschiedenis van alle optredens</h5>
+    <p class="card-text">Hier vind je een lijst van al onze optredens die er ooit zijn geweest</p>
+    <a href="/performance" class="btn btn-primary">Alle optredens</a>
+  </div>
+</div>
 
-<p class="text-primary"><a href="/performance">Alle optredens die er zijn geweest</a></p>
-<p class="text-primary"><a href="/performance">Opkomende optredens</a></p>
-<p class="text-primary"><a href="/performance">Optredens de komende week</a></p>
+{# CARD 2 #}
+<div class="card">
+  <h5 class="card-header">Alle optredens die er aan komen</h5>
+  <div class="card-body">
+    <h5 class="card-title">Alle optredens die er aan komen</h5>
+    <p class="card-text">Hier vind je een lijst van al onze optredens die er ooit zijn geweest</p>
+    <a href="/optredens" class="btn btn-primary">Optredens</a>
+  </div>
+</div>
 
+{# CARD 3 #}
+<div class="card">
+  <h5 class="card-header">Optredens in deze week</h5>
+  <div class="card-body">
+    <h5 class="card-title">Alle optredens die in deze week komen</h5>
+    <p class="card-text">Hier is een lijst van alle optredens die deze week plaats vinden</p>
+    <a href="/optredens" class="btn btn-primary">Optredens deze week</a>
+  </div>
+</div>
 
 {% endblock %}
