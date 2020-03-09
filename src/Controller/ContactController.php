@@ -6,6 +6,7 @@ use App\Entity\Contact;
 use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Httpfoundation\Request;
 
 class ContactController extends AbstractController
 {
